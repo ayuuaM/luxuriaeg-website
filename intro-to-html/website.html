@@ -1,19 +1,348 @@
+```html
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>First Website</title>
-  </head>
-  <body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>LuxuriaEG | Fashion in Egypt</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f0e8;
+      color: #191d23;
+    }
+
+    /* HEADER */
+    header {
+      height: 75px;
+      background-color: #191d23;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 7%;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+      letter-spacing: 3px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #c9b79c;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 550px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 50px 20px;
+      background: linear-gradient(
+        rgba(25, 29, 35, 0.55),
+        rgba(25, 29, 35, 0.55)
+      ),
+      url("https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1600&q=80");
+
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-content {
+      color: white;
+      max-width: 700px;
+    }
+
+    .hero h1 {
+      font-size: 60px;
+      letter-spacing: 7px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .shop-button {
+      display: inline-block;
+      background-color: #f5f0e8;
+      color: #191d23;
+      padding: 15px 35px;
+      text-decoration: none;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .shop-button:hover {
+      background-color: #c9b79c;
+    }
+
+    /* PRODUCTS */
+    .products-section {
+      padding: 70px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+      font-size: 32px;
+      letter-spacing: 2px;
+    }
+
+    .section-title p {
+      margin-top: 10px;
+      color: #666;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .product {
+      background-color: white;
+      padding-bottom: 20px;
+    }
+
+    .product img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 18px;
+    }
+
+    .product-info h3 {
+      margin-bottom: 8px;
+    }
+
+    .price {
+      color: #57707a;
+      font-weight: bold;
+      font-size: 17px;
+      margin-bottom: 15px;
+    }
+
+    .product-button {
+      display: inline-block;
+      background-color: #191d23;
+      color: white;
+      padding: 11px 20px;
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #191d23;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      margin-top: 30px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+
+      header {
+        height: auto;
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav a {
+        margin: 0 7px;
+        font-size: 12px;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      .products {
+        grid-template-columns: 1fr;
+      }
+
+      .product img {
+        height: 450px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+
+    <div class="logo">
+      LUXURIAEG
+    </div>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#women">Women</a>
+      <a href="#men">Men</a>
+      <a href="#new">New Arrivals</a>
+    </nav>
+
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <h1>LUXURIAEG</h1>
+
+      <p>
+        Modern fashion, made for Egypt.
+      </p>
+
+      <a href="#products" class="shop-button">
+        SHOP NOW
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- PRODUCTS -->
+  <section class="products-section" id="products">
+
+    <div class="section-title">
+
+      <h2>NEW ARRIVALS</h2>
+
+      <p>
+        Discover our latest collection.
+      </p>
+
+    </div>
+
+
+    <div class="products">
+
+      <!-- PRODUCT 1 -->
+      <div class="product">
+
+        <img
+          src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80"
+          alt="Fashion collection"
+        >
+
+        <div class="product-info">
+
+          <h3>Classic Beige Look</h3>
+
+          <p class="price">
+            EGP 1,299
+          </p>
+
+          <a href="#" class="product-button">
+            VIEW PRODUCT
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- PRODUCT 2 -->
+      <div class="product">
+
+        <img
+          src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80"
+          alt="Women's fashion"
+        >
+
+        <div class="product-info">
+
+          <h3>Elegant Everyday Set</h3>
+
+          <p class="price">
+            EGP 1,499
+          </p>
+
+          <a href="#" class="product-button">
+            VIEW PRODUCT
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- PRODUCT 3 -->
+      <div class="product">
+
+        <img
+          src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=800&q=80"
+          alt="Fashion clothing"
+        >
+
+        <div class="product-info">
+
+          <h3>Modern Essential</h3>
+
+          <p class="price">
+            EGP 999
+          </p>
+
+          <a href="#" class="product-button">
+            VIEW PRODUCT
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
     <p>
-      paragraph of text
+      © 2026 LUXURIAEG. All rights reserved.
     </p>
 
-    <button>
-      Hello
-    </button>
+  </footer>
 
-    <a href="https://www.youtube.com/" target="blank">
-      Link to YouTube
-    </a>
-  </body>
+</body>
 </html>
+```
